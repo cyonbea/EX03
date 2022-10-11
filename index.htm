@@ -1,0 +1,84 @@
+<!--Beatriz Teixeira exercicio 03 WEB DESIGN II -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MONO PLAY</title>
+    <link rel="stylesheet" href="style_def.css">
+
+</head>
+
+<body>
+    <div id="tudo">
+        <header>
+            <h1>welcome to the mono room</h1>
+
+            <nav>
+
+                <label class="switch">
+                    <input type="checkbox" id="switchValue" value="false">
+                    <span class="slider round"></span>
+                  </label>
+
+                  <a id="casa" href="home.htm">about mono</a>
+
+            </nav>
+        </header>
+
+        <main class="flex-main">
+            <section id="controlers">
+                <article class="flex-item" id="intext">
+                    <h2>Change the default text:</h2>
+
+                    <input type="text" name="text" id="text">
+                    <input type="button" value="change">
+
+                    <p>Use this input field to set and change the desired message text</p>
+                    <p><a href="#" id="reset">Reset to the default text</a></p>
+                </article>
+
+                <article class="flex-item">
+                    <h2>Select the desired font size:</h2>
+
+                    <input type="range" name="size" id="size" min="20" max="100"  value="20" step="1">
+                    <p>Currently: <span class="value_size">00</span></p>
+
+                    <p>Use this controler to set and change the desired font's body size value</p>
+                </article>
+
+                <article class="flex-item">
+                    <h2>Select the desired weight:</h2>
+
+                    <input type="range" name="weight" id="weight" min="100" max="800" value=" 100" step="20" >
+                    <p>Currently: <span class="value_weight">00</span></p>
+
+                    <p>Use this controler to set and change the desired font's weight value</p>
+                </article>
+
+            </section>
+            <!-- End of controlers section -->
+
+            <section id="about">
+                <article class="flex-bout">
+                    <h2>About this demo:</h2>
+                    <p>This demo aims to recapitulate the WD1 concepts and demonstrate the implementation of HTML5 "clean structure" with CSS3 box-model positioning, min-max atributes, css variables, flexbox, media queries and variable fonts </p>
+                </article>
+            </section>
+            <!-- End of about section -->
+        </main>
+
+
+        <footer>
+            © Beatriz Teixeira FBAUP 2022
+        </footer>
+    </div>
+
+    <!-- script linkage -->
+    <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,220 @@
+/*Beatriz Teixeira exercicio 03 WEB DESIGN II */
+
+/* import variable font */
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@100..900&display=swap');
+
+/* CSS variable :root level scoping. for local scope use the tag */
+:root {
+  --newcolor:#3a86ff;
+  --weight: 100;
+  --size: 1em;
+  --width:75;
+ }
+
+ /* presets*/
+ * {
+  font-family: "Azeret Mono",monospace;
+  margin:0;
+ }
+
+ html, body{
+  width:100%;
+  height:100%;
+  background-color:#3a86ff;
+ }
+
+  #tudo{
+    width:100%;
+    margin:0 auto;
+  }
+
+  main{
+    width:100%;
+    max-width: 100vw;
+     min-width: 300px;
+    margin:0 auto;
+  }
+/*end*/
+
+header{
+  display: block;
+  position: relative;
+  background-color: var(--newcolor);
+  min-height: 70vh;
+}
+
+body {
+  color:white;
+}
+ /*slider for switch stylesheet*/
+ nav{
+  position:fixed;
+ }
+ .switch{
+  position:fixed;
+  left:2em;
+  top:1em;
+  width:20px;
+  height:50px;
+ }
+
+  /*hide default checkbox/slider*/
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* slider */
+  .slider {
+    position:absolute ;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #f46036;
+    transition: .4s;
+    border-radius: 34px;
+
+  }
+ 
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 2px;
+    top: 2px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+  }
+  
+  input:checked + .slider {
+    background-color: #ffbe0b;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateY(30px) rotate(45deg);
+    border-radius: 2px;
+    left:3.5px;
+    height:13px;
+    width:13px;
+  }
+
+  /* end slider/switch */
+
+  #casa {
+    position: fixed;
+    left:90%;
+    top:20px;
+    font-size:0.8em;
+  }
+
+  #casa:hover {
+    font-size: 1.2em;
+    transition: 0.5s;
+  }
+  
+  h1{
+    text-align: center;
+    padding-top:22vh;
+    font-size:var(--size);
+    font-variation-settings: 'wght' var(--weight), 'wdth' var(--width);
+    transition: 1s all;
+   }
+
+   .home h1{
+    animation: breathe 4000ms infinite forwards;
+   }
+
+   /*animation h1*/
+   @keyframes breathe {
+    40% {
+      font-variation-settings: 'wght' 800, 'wdth' 110;
+      transform: rotate(-15deg);
+      
+    }
+  
+    70% {
+      font-variation-settings: 'wght' 100, 'wdth' 85;
+      transform: skewY(20deg);
+    }
+
+    100% {
+      font-variation-settings: 'wght' 100, 'wdth' 85;
+    }
+  }
+
+
+/* end header */
+
+section#controlers {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: flex-start;
+  flex-grow: 1;
+  position: relative;
+  overflow: auto;
+  margin: 3em 0 3em 0;
+ 
+}
+
+main > section#controlers > article {
+  width: 100%;
+height: 18em;
+  flex: 1;
+ }
+
+ @media screen and (min-width: 800px) {
+  section#controlers {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  #controlers p{
+    font-size: 0.8em;
+  }
+
+article{
+  text-align: center;
+}
+
+h2{
+  font-weight: 300;
+}
+
+p{
+  font-weight: 200;
+}
+
+#intext input{
+  margin-bottom: 1em;
+}
+
+article h2, article p+p, #about, #about p {
+  text-align: left;
+  padding: 0.8em;
+}
+
+   #about, .flex-item, header{
+    border-bottom: 2px solid white;
+    border-left: 2px solid white;
+    border-top: 2px solid white;
+    border-radius: 10px;
+   }
+
+   #about{
+    width:80%;
+    border-right: 2px solid white;
+    margin:0 auto;
+   }
+
+   #about:hover{
+    background-color: #ffbe0b;
+   }
+   
+   footer{
+    border-top: 2px solid white;
+    text-align: center;
+    margin-top: 3em;
+    padding:2em;
+   }
